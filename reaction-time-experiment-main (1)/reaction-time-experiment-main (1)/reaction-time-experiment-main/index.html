@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Human Capabilities - Reaction Tests</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="favicon.ico"/>
+  </head>
+  <body>
+    <h1 id="text">Reaction Time Test</h1>
+    <div id="stimulus">
+      <div id="instructions">
+        Click the button below to start the test:
+        <span class="button-default button-enabled" style="width:190px;" id="visual">Visual Reaction</span>
+      </div>
+    </div>
+    <script>
+      document.querySelector("#visual").addEventListener('click',goto);
+      function goto(evt){
+        console.log(evt.target.id);   
+        document.location.href="./"+evt.target.id+".html";
+      }
+    
+    </script>
+  </body>
+</html>

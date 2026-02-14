@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Human Capabilities - Reaction Test (Visual)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 id="text">Reaction Test (Visual)</h1>
+    <div id="stimulus">
+      <div class="circle" style="background-color:lightgray;"></div>
+      <div id="instructions">
+        This experiment measures reaction times with your dominant and non-dominant hands.
+        Set your info below, then press Start. When the circle turns orange, press Space with the instructed hand.
+        There will be 20 trials in random order: 10 dominant and 10 non-dominant.
+        <div style="margin-top:10px;">
+          <label for="participantId"><b>Participant ID/Name:</b></label>
+          <input id="participantId" type="text" placeholder="e.g., P01 or Alice" />
+        </div>
+        <div style="margin-top:10px;">
+          <b>Dominant hand:</b>
+          <label><input type="radio" name="dominantSide" value="Right" checked /> Right</label>
+          <label style="margin-left:10px;"><input type="radio" name="dominantSide" value="Left" /> Left</label>
+        </div>
+      </div>
+      <div id="handCue" style="margin-top:10px;"></div>
+    </div>
+    <div id="controls">
+      <span class="button-default button-enabled">Start Experiment</span>
+      <span id="time">&nbsp;</span>
+      <div id="trialCounter" style="margin-top:6px; background:#fff; border-radius:6px; padding:6px; text-align:center;"></div>
+      <div id="results" style="margin-top:10px;"></div>
+      <div id="participantsSummary" style="margin-top:10px;background:#fff;border-radius:6px;padding:10px;">
+        <div><b>Participants comparison (Visual)</b></div>
+        <div id="participantsTable"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

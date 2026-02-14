@@ -1,0 +1,146 @@
+/******************************************************************************
+START Glitch hello-app default styles
+
+The styles in this section do some minimal CSS resets, set default fonts and 
+colors, and handle the layout for our footer and "Remix on Glitch" button. If
+you're new to CSS they may seem a little complicated, but you can scroll down
+to this section's matching END comment to see page-specific styles.
+******************************************************************************/
+
+/* 
+  The style rules specify elements by type and by attributes such as class and ID
+  Each section indicates an element or elements, then lists the style properties to apply
+  See if you can cross-reference the rules in this file with the elements in index.html
+*/
+
+/* Our default values set as CSS variables */
+:root {
+  --color-bg: #69a7f7;
+  --color-text-main: #000000;
+  --color-primary: #ffff00;
+  --wrapper-height: 87vh;
+  --image-max-width: 300px;
+  --image-margin: 3rem;
+  --font-family: "HK Grotesk";
+  --font-family-header: "HK Grotesk";
+}
+
+/* Import fonts */
+@font-face {
+  font-family: HK Grotesk;
+  src: url("HKGrotesk-Regular.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: HK Grotesk;
+  font-weight: bold;
+  src: url("HKGrotesk-Bold.otf")
+    format("opentype");
+}
+
+body {
+  font-family: HK Grotesk;
+  background-color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0px;
+}
+
+h1 {
+  display: block;
+  background: white;
+  padding-left: 10px;
+  width: 100%;
+}
+
+div#stimulus {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 50px;
+  min-width:800px;
+}
+
+div#controls{
+    margin: 20px 50px;
+}
+
+div#instructions {
+  max-width: 350px;
+  margin-left: 50px;
+  background-color: #c6dbf7;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.circle {
+  min-width: 350px;
+  min-height: 350px;
+  max-height: 350px;
+  max-width: 350px;
+  border: 5px solid gray;
+  border-radius: 175px;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inactive {
+  background-color: #c6dbf7;
+}
+.active {
+  background-color: orange;
+}
+
+div#controls{
+  display:flex;
+  flex-direction:column;
+  max-width:400px;
+}
+
+.button-default {
+  font-family: HK Grotesk;
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+  line-height: 1rem;
+  font-weight: 500;
+  height: 2.75rem;
+  align-items: center;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-decoration: none;
+  white-space: nowrap;
+  margin: 10px 95px;
+  max-width:170px;
+  display:block;
+  text-align:center;
+  font-weight:bolder;
+}
+
+span#time{
+  text-align:center;
+  background-color:white;
+  padding:5px;
+  flex-grow:0;
+  border-radius:5px;
+}
+
+.button-disabled {
+  background-color: #ccc; /* Change the background color */
+  color: #888; /* Change the text color */
+  cursor: not-allowed; /* Change the cursor style */
+  opacity: 0.8; /* Change the opacity to make it look disabled */
+}
+
+.button-enabled{
+  background: #ffffff;
+  color: #000;
+  cursor: pointer;
+  opacity:1.0;
+}
+
+#image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
